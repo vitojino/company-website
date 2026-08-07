@@ -3,1015 +3,605 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>빅보이부품 주식회사 | BIGBOY PARTS</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,"Noto Sans KR",sans-serif;
-    color:#152332;
-    background:#fff;
-}
-
 :root{
-    --navy:#123a60;
-    --deep:#071b2d;
-    --blue:#1599e5;
-    --light:#f4f7fa;
-    --gray:#687786;
-    --border:#dfe6ec;
+  --navy:#08233b;
+  --navy2:#0d3556;
+  --blue:#1498df;
+  --light:#f4f7fa;
+  --text:#172737;
+  --gray:#6f7e8b;
+  --line:#dce5eb;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,"Noto Sans KR",sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+.container{max-width:1200px;margin:auto;padding:105px 28px}
 
 /* HEADER */
-
 header{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(255,255,255,.97);
-    border-bottom:1px solid #e6ebef;
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid #e5ebef;
 }
-
 nav{
-    max-width:1240px;
-    height:86px;
-    margin:auto;
-    padding:0 30px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+  max-width:1200px;height:82px;margin:auto;padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;
 }
-
-.logo img{
-    width:185px;
-    height:auto;
-    display:block;
-}
-
-.menu{
-    display:flex;
-    align-items:center;
-    gap:32px;
-}
-
+.logo img{width:175px;display:block}
+.menu{display:flex;align-items:center;gap:27px}
 .menu a{
-    text-decoration:none;
-    color:#263746;
-    font-size:14px;
-    font-weight:700;
+  color:#263847;text-decoration:none;
+  font-size:13px;font-weight:700;
 }
-
-.menu a:hover{
-    color:var(--blue);
+.menu a:hover{color:var(--blue)}
+.lang{
+  background:#fff;border:1px solid #ccd6de;
+  padding:8px 12px;font-weight:700;cursor:pointer;
 }
-
-.language{
-    border:1px solid #d5dde4;
-    background:#fff;
-    padding:9px 13px;
-    border-radius:4px;
-    cursor:pointer;
-    font-weight:700;
-}
-
 
 /* HERO */
-
 .hero{
-    background:
-        linear-gradient(110deg,#071b2d 0%,#0b2c48 65%,#10466d 100%);
-    color:white;
-    min-height:660px;
-    position:relative;
-    overflow:hidden;
+  min-height:620px;
+  background:linear-gradient(115deg,#061827 0%,#092b47 62%,#0d456d 100%);
+  color:#fff;
+  position:relative;overflow:hidden;
 }
-
 .hero:after{
-    content:"";
-    position:absolute;
-    width:600px;
-    height:600px;
-    right:-250px;
-    top:-150px;
-    border:100px solid rgba(21,153,229,.08);
-    border-radius:50%;
+  content:"";
+  position:absolute;
+  width:650px;height:650px;
+  border:110px solid rgba(20,152,223,.08);
+  border-radius:50%;
+  right:-300px;top:-220px;
 }
-
 .hero-inner{
-    max-width:1240px;
-    margin:auto;
-    padding:125px 30px 105px;
-    position:relative;
-    z-index:2;
+  max-width:1200px;margin:auto;padding:130px 28px;
+  position:relative;z-index:2;
 }
-
-.eyebrow{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:12px;
-    letter-spacing:3px;
-    font-weight:700;
-    color:#7bc9f4;
-    margin-bottom:25px;
+.label{
+  color:#45b5ef;font-size:12px;font-weight:800;
+  letter-spacing:3px;margin-bottom:22px;
 }
-
-.eyebrow:before{
-    content:"";
-    width:38px;
-    height:3px;
-    background:var(--blue);
-}
-
 .hero h1{
-    max-width:850px;
-    font-size:62px;
-    line-height:1.12;
-    letter-spacing:-2.5px;
-    margin-bottom:27px;
+  max-width:850px;font-size:61px;
+  line-height:1.12;letter-spacing:-2.5px;
+  margin-bottom:27px;
 }
-
 .hero p{
-    max-width:720px;
-    font-size:18px;
-    line-height:1.8;
-    color:#c8d7e3;
+  max-width:720px;color:#c5d4df;
+  font-size:17px;line-height:1.9;
+}
+.hero-btn{
+  display:inline-block;margin-top:35px;
+  background:var(--blue);color:#fff;
+  text-decoration:none;font-weight:700;
+  padding:15px 24px;
 }
 
-.hero-buttons{
-    margin-top:38px;
-    display:flex;
-    gap:12px;
+/* NUMBERS */
+.numbers{
+  max-width:1140px;margin:-50px auto 0;
+  background:#fff;position:relative;z-index:5;
+  box-shadow:0 12px 35px rgba(0,0,0,.1);
+  display:grid;grid-template-columns:repeat(4,1fr);
 }
-
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    padding:15px 24px;
-    font-size:14px;
-    font-weight:700;
-    border-radius:3px;
+.number-box{padding:32px;border-right:1px solid var(--line)}
+.number-box:last-child{border:0}
+.number-box strong{
+  display:block;color:var(--navy);
+  font-size:28px;margin-bottom:8px;
 }
-
-.btn-primary{
-    background:var(--blue);
-    color:white;
-}
-
-.btn-secondary{
-    border:1px solid rgba(255,255,255,.4);
-    color:white;
-}
-
-
-/* STATS */
-
-.stats{
-    background:white;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-    max-width:1180px;
-    margin:-45px auto 0;
-    position:relative;
-    z-index:5;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-.stat{
-    padding:35px 28px;
-    border-right:1px solid var(--border);
-}
-
-.stat:last-child{
-    border-right:none;
-}
-
-.stat strong{
-    display:block;
-    color:var(--navy);
-    font-size:20px;
-    margin-bottom:8px;
-}
-
-.stat span{
-    color:#758391;
-    font-size:13px;
-}
-
+.number-box span{font-size:13px;color:var(--gray)}
 
 /* GENERAL */
-
-.container{
-    max-width:1240px;
-    margin:auto;
-    padding:110px 30px;
-}
-
-.section-label{
-    color:var(--blue);
-    font-size:12px;
-    letter-spacing:3px;
-    font-weight:800;
-    margin-bottom:17px;
-}
-
-h2{
-    font-size:42px;
-    letter-spacing:-1.5px;
-    margin-bottom:23px;
-}
-
-.description{
-    color:var(--gray);
-    line-height:1.9;
-    font-size:16px;
-    max-width:760px;
-}
-
+.section-title{font-size:42px;letter-spacing:-1.5px;margin-bottom:20px}
+.desc{max-width:790px;color:var(--gray);font-size:16px;line-height:1.9}
+.gray{background:var(--light)}
 
 /* ABOUT */
-
 .about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
+  margin-top:50px;display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
 }
-
-/* 나중에 회사/창고 사진 넣을 곳 */
-
-.photo-placeholder{
-    height:390px;
-    background:
-        linear-gradient(135deg,#eef3f7,#dfe8ef);
-    border:1px solid #d9e2e9;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#8a9aa7;
-    font-size:13px;
-    letter-spacing:2px;
-    position:relative;
+.about-item{padding:32px 28px;border-right:1px solid var(--line)}
+.about-item:last-child{border:0}
+.about-item strong{
+  display:block;font-size:17px;color:var(--navy);
+  margin-bottom:12px;
 }
+.about-item p{font-size:14px;color:var(--gray);line-height:1.7}
 
-.photo-placeholder:before{
-    content:"WAREHOUSE / DISTRIBUTION PHOTO";
+/* HISTORY */
+.timeline{margin-top:55px;position:relative}
+.timeline:before{
+  content:"";position:absolute;left:103px;top:10px;bottom:10px;
+  width:2px;background:#dbe4ea;
 }
-
-.photo-placeholder:after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:90px;
-    height:5px;
-    background:var(--blue);
+.history-row{
+  display:grid;grid-template-columns:80px 1fr;
+  gap:50px;position:relative;padding:0 0 42px;
 }
+.history-row:after{
+  content:"";position:absolute;left:97px;top:7px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--blue);
+}
+.year{font-size:20px;font-weight:800;color:var(--navy)}
+.history-text h3{font-size:18px;margin-bottom:8px}
+.history-text p{font-size:14px;color:var(--gray);line-height:1.7}
 
+/* NETWORK */
+.network{
+  background:var(--navy);color:#fff;
+}
+.network .desc{color:#b8c9d5}
+.network-grid{
+  margin-top:50px;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+.region{
+  border:1px solid rgba(255,255,255,.13);
+  padding:26px;background:rgba(255,255,255,.035);
+}
+.region strong{
+  display:block;color:#52baf1;font-size:13px;
+  margin-bottom:10px;
+}
+.region span{font-size:14px;line-height:1.7;color:#d4dfe6}
+
+/* ORGANIZATION */
+.org-top{
+  margin:50px auto 25px;
+  width:250px;text-align:center;
+  padding:20px;background:var(--navy);
+  color:#fff;font-weight:700;
+}
+.org-manager{
+  width:250px;margin:auto;text-align:center;
+  padding:18px;border:2px solid var(--blue);
+  color:var(--navy);font-weight:700;
+}
+.teams{
+  margin-top:35px;display:grid;
+  grid-template-columns:repeat(4,1fr);gap:15px;
+}
+.team{border:1px solid var(--line);padding:25px}
+.team h3{font-size:16px;color:var(--navy);margin-bottom:15px}
+.team p{font-size:13px;color:var(--gray);line-height:1.8}
+
+/* GOALS */
+.goals{background:#071b2d;color:#fff}
+.goals .desc{color:#afc0cc}
+.goal-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:20px;margin-top:50px;
+}
+.goal{
+  padding:40px;border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.035);
+}
+.goal small{color:#4ab8ef;font-weight:800;letter-spacing:2px}
+.goal strong{
+  display:block;font-size:44px;margin:17px 0 12px;
+}
+.goal p{color:#b8c7d1;font-size:14px;line-height:1.8}
 
 /* BUSINESS */
-
-.business{
-    background:var(--light);
+.business-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;margin-top:50px;
 }
-
-.cards{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+.business-card{
+  padding:35px;border:1px solid var(--line);
+  border-top:4px solid var(--blue);
 }
-
-.card{
-    background:white;
-    padding:38px 34px;
-    border:1px solid var(--border);
-    transition:.25s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,.07);
-}
-
-.number{
-    color:var(--blue);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:28px;
-}
-
-.card h3{
-    font-size:21px;
-    margin-bottom:16px;
-}
-
-.card p{
-    color:#71808d;
-    font-size:14px;
-    line-height:1.8;
-}
-
-
-/* DISTRIBUTION */
-
-.distribution{
-    background:var(--deep);
-    color:white;
-}
-
-.distribution-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
-}
-
-.distribution .description{
-    color:#afc0cd;
-}
-
-.flow{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-.flow-item{
-    padding:25px;
-    border:1px solid rgba(255,255,255,.14);
-    background:rgba(255,255,255,.04);
-}
-
-.flow-item strong{
-    display:block;
-    color:#52baf3;
-    margin-bottom:9px;
-    font-size:14px;
-}
-
-.flow-item span{
-    font-size:13px;
-    color:#b8c7d2;
-}
-
-
-/* STRENGTH */
-
-.strength-grid{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:45px;
-}
-
-.strength-item{
-    border-top:3px solid var(--blue);
-    padding-top:25px;
-}
-
-.strength-item h3{
-    font-size:20px;
-    margin-bottom:14px;
-}
-
-.strength-item p{
-    color:#71808d;
-    font-size:14px;
-    line-height:1.8;
-}
-
+.business-card h3{font-size:19px;margin-bottom:15px}
+.business-card p{font-size:14px;color:var(--gray);line-height:1.8}
 
 /* CONTACT */
-
-.contact{
-    background:#0b2942;
-    color:white;
+.contact{background:#0b3555;color:#fff}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:70px;align-items:start;
 }
-
-.contact-inner{
-    max-width:1240px;
-    margin:auto;
-    padding:90px 30px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
+.contact .desc{color:#c1d1dc}
+.contact-info{border-left:3px solid var(--blue);padding-left:30px}
+.contact-line{margin-bottom:25px}
+.contact-line small{
+  display:block;color:#6dc5f3;
+  font-size:11px;letter-spacing:2px;margin-bottom:7px;
 }
-
-.contact h2{
-    margin-bottom:13px;
-}
-
-.contact p{
-    color:#b7c8d5;
-}
-
-.contact-button{
-    white-space:nowrap;
-    background:var(--blue);
-    color:white;
-    text-decoration:none;
-    padding:16px 27px;
-    font-weight:700;
-    font-size:14px;
-}
-
+.contact-line strong{font-size:17px;font-weight:600}
+.contact-line a{color:#fff;text-decoration:none}
 
 /* FOOTER */
-
-footer{
-    background:#061521;
-    color:#718392;
+footer{background:#05131e;color:#738694}
+.footer{
+  max-width:1200px;margin:auto;padding:35px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:12px;
 }
-
-.footer-inner{
-    max-width:1240px;
-    margin:auto;
-    padding:38px 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:12px;
-}
-
-.footer-inner img{
-    width:125px;
-    filter:grayscale(1);
-    opacity:.75;
-}
-
+.footer img{width:125px;opacity:.8}
 
 /* MOBILE */
-
 @media(max-width:800px){
-
-    nav{
-        height:72px;
-        padding:0 20px;
-    }
-
-    .logo img{
-        width:145px;
-    }
-
-    .menu a{
-        display:none;
-    }
-
-    .hero{
-        min-height:580px;
-    }
-
-    .hero-inner{
-        padding:95px 22px;
-    }
-
-    .hero h1{
-        font-size:41px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .stats{
-        margin:0;
-        grid-template-columns:1fr 1fr;
-    }
-
-    .stat{
-        border-bottom:1px solid var(--border);
-    }
-
-    .container{
-        padding:75px 22px;
-    }
-
-    h2{
-        font-size:33px;
-    }
-
-    .about-grid,
-    .distribution-grid{
-        grid-template-columns:1fr;
-        gap:45px;
-    }
-
-    .cards,
-    .strength-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-inner{
-        padding:65px 22px;
-        display:block;
-    }
-
-    .contact-button{
-        display:inline-block;
-        margin-top:30px;
-    }
-
-    .footer-inner{
-        display:block;
-        text-align:center;
-    }
-
-    .footer-inner img{
-        margin-bottom:20px;
-    }
+  nav{height:70px;padding:0 20px}
+  .logo img{width:140px}
+  .menu a{display:none}
+  .hero{min-height:560px}
+  .hero-inner{padding:100px 22px}
+  .hero h1{font-size:40px}
+  .numbers{margin:0;grid-template-columns:1fr 1fr}
+  .container{padding:75px 22px}
+  .section-title{font-size:33px}
+  .about-grid,.network-grid,.teams,.business-grid{grid-template-columns:1fr}
+  .goal-grid,.contact-grid{grid-template-columns:1fr}
+  .timeline:before{left:80px}
+  .history-row{grid-template-columns:60px 1fr;gap:40px}
+  .history-row:after{left:74px}
+  .footer{display:block;text-align:center}
+  .footer img{margin-bottom:18px}
 }
-
 </style>
 </head>
 
-
 <body>
 
-
 <header>
-
 <nav>
+  <div class="logo">
+    <img src="빅보이부품-컬러로고.gif" alt="BIGBOY PARTS">
+  </div>
 
-<div class="logo">
-<img src="빅보이부품-컬러로고.gif" alt="BIGBOY PARTS">
-</div>
-
-<div class="menu">
-
-<a href="#about"
-data-ko="회사소개"
-data-en="ABOUT">
-회사소개
-</a>
-
-<a href="#business"
-data-ko="사업분야"
-data-en="BUSINESS">
-사업분야
-</a>
-
-<a href="#distribution"
-data-ko="유통"
-data-en="DISTRIBUTION">
-유통
-</a>
-
-<a href="#strength"
-data-ko="경쟁력"
-data-en="STRENGTHS">
-경쟁력
-</a>
-
-<a href="#contact"
-data-ko="문의"
-data-en="CONTACT">
-문의
-</a>
-
-<button class="language" onclick="changeLanguage()">EN</button>
-
-</div>
-
+  <div class="menu">
+    <a href="#about" data-ko="회사소개" data-en="ABOUT">회사소개</a>
+    <a href="#history" data-ko="연혁" data-en="HISTORY">연혁</a>
+    <a href="#network" data-ko="네트워크" data-en="NETWORK">네트워크</a>
+    <a href="#organization" data-ko="조직" data-en="ORGANIZATION">조직</a>
+    <a href="#goals" data-ko="성장목표" data-en="GOALS">성장목표</a>
+    <a href="#contact" data-ko="문의" data-en="CONTACT">문의</a>
+    <button class="lang" onclick="changeLanguage()">EN</button>
+  </div>
 </nav>
-
 </header>
 
-
-
 <section class="hero">
-
 <div class="hero-inner">
+  <div class="label">BIGBOY PARTS · SINCE 2010</div>
 
-<div class="eyebrow">
-AUTOMOTIVE PARTS DISTRIBUTION
+  <h1 data-ko="자동차부품 유통의 더 넓은 연결"
+      data-en="Connecting the Automotive Parts Market">
+    자동차부품 유통의 더 넓은 연결
+  </h1>
+
+  <p data-ko="빅보이부품 주식회사는 2010년 설립 이후 자동차부품 유통 네트워크를 지속적으로 확장하며 고객과 공급사를 연결하고 있습니다."
+     data-en="Since 2010, BIGBOY PARTS CO., LTD. has continuously expanded its automotive parts distribution network, connecting customers and suppliers.">
+    빅보이부품 주식회사는 2010년 설립 이후 자동차부품 유통 네트워크를
+    지속적으로 확장하며 고객과 공급사를 연결하고 있습니다.
+  </p>
+
+  <a href="#about" class="hero-btn"
+     data-ko="BIGBOY 알아보기"
+     data-en="DISCOVER BIGBOY">
+     BIGBOY 알아보기
+  </a>
 </div>
-
-<h1
-data-ko="자동차부품 유통의 새로운 기준"
-data-en="A New Standard in Automotive Parts Distribution">
-자동차부품 유통의 새로운 기준
-</h1>
-
-<p
-data-ko="빅보이부품 주식회사는 정확한 부품 정보와 안정적인 공급망을 기반으로 국내외 고객에게 신속하고 효율적인 자동차부품 유통 서비스를 제공합니다."
-data-en="BIGBOY PARTS CO., LTD. delivers fast and efficient automotive parts distribution services through accurate parts information and a reliable supply network.">
-빅보이부품 주식회사는 정확한 부품 정보와 안정적인 공급망을 기반으로
-국내외 고객에게 신속하고 효율적인 자동차부품 유통 서비스를 제공합니다.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#business"
-class="btn btn-primary"
-data-ko="사업 분야 보기"
-data-en="OUR BUSINESS">
-사업 분야 보기
-</a>
-
-<a href="#contact"
-class="btn btn-secondary"
-data-ko="비즈니스 문의"
-data-en="CONTACT US">
-비즈니스 문의
-</a>
-
-</div>
-
-</div>
-
 </section>
 
+<div class="numbers">
+  <div class="number-box">
+    <strong>2010</strong>
+    <span data-ko="BIGBOY PARTS 설립" data-en="Company Established">BIGBOY PARTS 설립</span>
+  </div>
 
+  <div class="number-box">
+    <strong>$5.7M</strong>
+    <span data-ko="2026 매출 목표" data-en="2026 Sales Target">2026 매출 목표</span>
+  </div>
 
-<div class="stats">
+  <div class="number-box">
+    <strong>$7M</strong>
+    <span data-ko="2027 매출 목표" data-en="2027 Sales Target">2027 매출 목표</span>
+  </div>
 
-<div class="stat">
-<strong data-ko="자동차부품 전문" data-en="Automotive Parts">
-자동차부품 전문
-</strong>
-<span data-ko="전문 유통 서비스" data-en="Specialized Distribution">
-전문 유통 서비스
-</span>
+  <div class="number-box">
+    <strong>90%</strong>
+    <span data-ko="2027 부품 커버리지 목표" data-en="2027 Coverage Target">2027 부품 커버리지 목표</span>
+  </div>
 </div>
-
-<div class="stat">
-<strong data-ko="B2B 공급" data-en="B2B Supply">
-B2B 공급
-</strong>
-<span data-ko="기업 고객 중심 공급" data-en="Business-focused Supply">
-기업 고객 중심 공급
-</span>
-</div>
-
-<div class="stat">
-<strong data-ko="정확한 부품정보" data-en="Accurate Data">
-정확한 부품정보
-</strong>
-<span data-ko="품번 및 적용차량 확인" data-en="Part & Vehicle Data">
-품번 및 적용차량 확인
-</span>
-</div>
-
-<div class="stat">
-<strong data-ko="글로벌 비즈니스" data-en="Global Business">
-글로벌 비즈니스
-</strong>
-<span data-ko="해외 거래 및 수출 대응" data-en="International Trade">
-해외 거래 및 수출 대응
-</span>
-</div>
-
-</div>
-
-
 
 <section id="about">
-
 <div class="container">
+  <div class="label">ABOUT US</div>
 
-<div class="about-grid">
+  <h2 class="section-title"
+      data-ko="자동차부품 전문 유통기업"
+      data-en="Automotive Parts Distribution Company">
+      자동차부품 전문 유통기업
+  </h2>
 
-<div>
+  <p class="desc"
+     data-ko="빅보이부품 주식회사는 자동차부품 공급망과 전국 유통 네트워크를 지속적으로 확대하고 있습니다. 본사와 창고 운영, 대리점 네트워크 및 다양한 파트너사와의 협력을 기반으로 자동차부품 시장의 공급 경쟁력을 강화하고 있습니다."
+     data-en="BIGBOY PARTS CO., LTD. continues to expand its automotive parts supply chain and nationwide distribution network. Through its head office, warehouse operations, agency network and partnerships, the company strengthens its automotive parts supply capabilities.">
+     빅보이부품 주식회사는 자동차부품 공급망과 전국 유통 네트워크를
+     지속적으로 확대하고 있습니다.
+  </p>
 
-<div class="section-label">ABOUT BIGBOY</div>
+  <div class="about-grid">
+    <div class="about-item">
+      <strong data-ko="본사 운영" data-en="HEAD OFFICE">본사 운영</strong>
+      <p data-ko="본사와 본사 창고를 기반으로 관리·영업·물류 업무를 운영합니다."
+         data-en="Management, sales and logistics operations are managed through the head office and warehouse.">
+         본사와 본사 창고를 기반으로 관리·영업·물류 업무를 운영합니다.
+      </p>
+    </div>
 
-<h2
-data-ko="부품을 넘어 신뢰를 유통합니다."
-data-en="We Distribute More Than Parts. We Deliver Trust.">
-부품을 넘어 신뢰를 유통합니다.
-</h2>
+    <div class="about-item">
+      <strong data-ko="외부 창고" data-en="EXTERNAL WAREHOUSE">외부 창고</strong>
+      <p data-ko="진북 지역 외부 창고를 통해 추가적인 부품 보관 및 공급 역량을 확보하고 있습니다."
+         data-en="An additional warehouse in Jinbuk expands storage and supply capacity.">
+         진북 지역 외부 창고를 통해 추가적인 부품 보관 및 공급 역량을 확보하고 있습니다.
+      </p>
+    </div>
 
-<p class="description"
-data-ko="빅보이부품 주식회사는 자동차부품 전문 유통회사입니다. 다양한 공급 네트워크와 부품 데이터를 기반으로 고객이 필요로 하는 제품을 정확하게 확인하고 안정적으로 공급하는 것을 목표로 합니다."
-data-en="BIGBOY PARTS CO., LTD. is an automotive parts distribution company. Through our supply network and parts data, we focus on identifying the right products and delivering them reliably to our customers.">
-빅보이부품 주식회사는 자동차부품 전문 유통회사입니다.
-다양한 공급 네트워크와 부품 데이터를 기반으로 고객이 필요로 하는
-제품을 정확하게 확인하고 안정적으로 공급하는 것을 목표로 합니다.
-</p>
-
+    <div class="about-item">
+      <strong data-ko="전국 네트워크" data-en="NATIONWIDE NETWORK">전국 네트워크</strong>
+      <p data-ko="전국 주요 지역의 대리점 네트워크를 통해 유통 범위를 확대하고 있습니다."
+         data-en="Our agency network continues to expand distribution coverage across Korea.">
+         전국 주요 지역의 대리점 네트워크를 통해 유통 범위를 확대하고 있습니다.
+      </p>
+    </div>
+  </div>
 </div>
-
-
-<div class="photo-placeholder"></div>
-
-</div>
-
-</div>
-
 </section>
 
-
-
-<section id="business" class="business">
-
+<section id="history" class="gray">
 <div class="container">
+  <div class="label">COMPANY HISTORY</div>
+  <h2 class="section-title" data-ko="성장의 발자취" data-en="Our History">성장의 발자취</h2>
 
-<div class="section-label">OUR BUSINESS</div>
+  <div class="timeline">
+    <div class="history-row">
+      <div class="year">2010</div>
+      <div class="history-text">
+        <h3 data-ko="BIGBOY PARTS 설립" data-en="BIGBOY PARTS Established">BIGBOY PARTS 설립</h3>
+        <p data-ko="초기 자본금 미화 30,000달러로 개인사업 시작"
+           data-en="Established as an individual business with initial capital of USD 30,000.">
+           초기 자본금 미화 30,000달러로 개인사업 시작
+        </p>
+      </div>
+    </div>
 
-<h2
-data-ko="자동차부품 유통 전문 서비스"
-data-en="Automotive Parts Distribution Services">
-자동차부품 유통 전문 서비스
-</h2>
+    <div class="history-row">
+      <div class="year">2016</div>
+      <div class="history-text">
+        <h3 data-ko="법인 전환 및 사업 확장" data-en="Corporate Conversion & Expansion">법인 전환 및 사업 확장</h3>
+        <p data-ko="BIGBOY PARTS 법인 전환 및 사업 규모 확대"
+           data-en="Corporate conversion and expansion of BIGBOY PARTS.">
+           BIGBOY PARTS 법인 전환 및 사업 규모 확대
+        </p>
+      </div>
+    </div>
 
-<p class="description"
-data-ko="부품 확인부터 공급과 유통까지 고객의 비즈니스에 필요한 서비스를 제공합니다."
-data-en="From parts identification to supply and distribution, we support our customers' automotive parts business.">
-부품 확인부터 공급과 유통까지 고객의 비즈니스에 필요한 서비스를 제공합니다.
-</p>
+    <div class="history-row">
+      <div class="year">2017</div>
+      <div class="history-text">
+        <h3 data-ko="대리점 네트워크 확대" data-en="Agency Network Expansion">대리점 네트워크 확대</h3>
+        <p data-ko="울산·진주·포항·김해 등 주요 지역 대리점 확대 및 창고 확장"
+           data-en="Expanded agencies including Ulsan, Jinju, Pohang and Gimhae, along with warehouse expansion.">
+           울산·진주·포항·김해 등 주요 지역 대리점 확대 및 창고 확장
+        </p>
+      </div>
+    </div>
 
-
-<div class="cards">
-
-<div class="card">
-
-<div class="number">01 / DISTRIBUTION</div>
-
-<h3
-data-ko="자동차부품 유통"
-data-en="Parts Distribution">
-자동차부품 유통
-</h3>
-
-<p
-data-ko="다양한 차량과 브랜드에 필요한 자동차부품을 확보하여 고객에게 안정적으로 공급합니다."
-data-en="We source and reliably distribute automotive parts for a wide range of vehicle brands and applications.">
-다양한 차량과 브랜드에 필요한 자동차부품을 확보하여
-고객에게 안정적으로 공급합니다.
-</p>
-
+    <div class="history-row">
+      <div class="year">2017~</div>
+      <div class="history-text">
+        <h3 data-ko="전국 유통망 확대" data-en="Nationwide Distribution Expansion">전국 유통망 확대</h3>
+        <p data-ko="제주·순천·전주·청주·광주·부산·통영·사천·대구·인천·익산·의정부·포천·평택 등으로 네트워크 확대"
+           data-en="Expanded the network to Jeju, Suncheon, Jeonju, Cheongju, Gwangju, Busan, Tongyeong, Sacheon, Daegu, Incheon, Iksan, Uijeongbu, Pocheon and Pyeongtaek.">
+           제주·순천·전주·청주·광주·부산·통영·사천·대구·인천·익산·의정부·포천·평택 등으로 네트워크 확대
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<div class="card">
-
-<div class="number">02 / DATA</div>
-
-<h3
-data-ko="부품 정보 관리"
-data-en="Parts Information">
-부품 정보 관리
-</h3>
-
-<p
-data-ko="품번, 적용 차량 및 호환 정보를 기반으로 정확한 제품 선택과 효율적인 업무를 지원합니다."
-data-en="Accurate part numbers, vehicle applications and interchange data support efficient product selection.">
-품번, 적용 차량 및 호환 정보를 기반으로
-정확한 제품 선택과 효율적인 업무를 지원합니다.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="number">03 / B2B</div>
-
-<h3
-data-ko="기업간 공급"
-data-en="B2B Supply">
-기업간 공급
-</h3>
-
-<p
-data-ko="자동차부품 판매업체와 정비업체 등 기업 고객을 위한 지속적이고 안정적인 공급 서비스를 제공합니다."
-data-en="We provide reliable and continuous supply services for automotive parts businesses and repair shops.">
-자동차부품 판매업체와 정비업체 등 기업 고객을 위한
-지속적이고 안정적인 공급 서비스를 제공합니다.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-
-
-<section id="distribution" class="distribution">
-
+<section id="network" class="network">
 <div class="container">
+  <div class="label">DISTRIBUTION NETWORK</div>
 
-<div class="distribution-grid">
+  <h2 class="section-title"
+      data-ko="전국으로 연결되는 유통 네트워크"
+      data-en="Nationwide Distribution Network">
+      전국으로 연결되는 유통 네트워크
+  </h2>
 
-<div>
+  <p class="desc"
+     data-ko="빅보이부품은 전국 주요 지역의 대리점 네트워크를 확대하며 자동차부품 공급 범위를 넓혀가고 있습니다."
+     data-en="BIGBOY PARTS continues to expand its agency network throughout major regions of Korea.">
+     빅보이부품은 전국 주요 지역의 대리점 네트워크를 확대하며 자동차부품 공급 범위를 넓혀가고 있습니다.
+  </p>
 
-<div class="section-label">DISTRIBUTION NETWORK</div>
-
-<h2
-data-ko="효율적인 부품 유통"
-data-en="Efficient Parts Distribution">
-효율적인 부품 유통
-</h2>
-
-<p class="description"
-data-ko="정확한 제품 확인과 재고 관리, 공급 및 배송까지 연결되는 유통 프로세스를 통해 고객의 부품 조달을 지원합니다."
-data-en="Our distribution process connects accurate parts identification, inventory management, supply and delivery to support efficient parts procurement.">
-정확한 제품 확인과 재고 관리, 공급 및 배송까지 연결되는
-유통 프로세스를 통해 고객의 부품 조달을 지원합니다.
-</p>
-
+  <div class="network-grid">
+    <div class="region"><strong>GYEONGSANG</strong><span>울산 · 진주 · 포항 · 김해 · 통영 · 사천 · 대구 · 부산</span></div>
+    <div class="region"><strong>JEOLLA</strong><span>순천 · 전주 · 광주 · 익산</span></div>
+    <div class="region"><strong>CAPITAL</strong><span>인천 · 의정부 · 포천 · 평택</span></div>
+    <div class="region"><strong>OTHER</strong><span>청주 · 제주</span></div>
+  </div>
 </div>
-
-
-<div class="flow">
-
-<div class="flow-item">
-<strong>01</strong>
-<span data-ko="부품 확인" data-en="Parts Identification">부품 확인</span>
-</div>
-
-<div class="flow-item">
-<strong>02</strong>
-<span data-ko="재고 및 공급 관리" data-en="Inventory & Supply">재고 및 공급 관리</span>
-</div>
-
-<div class="flow-item">
-<strong>03</strong>
-<span data-ko="주문 처리" data-en="Order Processing">주문 처리</span>
-</div>
-
-<div class="flow-item">
-<strong>04</strong>
-<span data-ko="배송 및 수출" data-en="Delivery & Export">배송 및 수출</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-
-
-<section id="strength">
-
+<section id="organization">
 <div class="container">
+  <div class="label">OUR TEAM</div>
+  <h2 class="section-title" data-ko="전문 조직 구성" data-en="Our Organization">전문 조직 구성</h2>
 
-<div class="section-label">WHY BIGBOY</div>
+  <div class="org-top">CEO</div>
+  <div class="org-manager" data-ko="총괄 관리자" data-en="GENERAL MANAGER">총괄 관리자</div>
 
-<h2
-data-ko="빅보이부품의 경쟁력"
-data-en="Why BIGBOY PARTS">
-빅보이부품의 경쟁력
-</h2>
+  <div class="teams">
+    <div class="team">
+      <h3 data-ko="물류팀" data-en="LOGISTICS TEAM">물류팀</h3>
+      <p data-ko="창고 관리 · 포장 관리 · 품질 관리"
+         data-en="Warehouse Management · Packing Management · Quality Assurance">
+         창고 관리 · 포장 관리 · 품질 관리
+      </p>
+    </div>
 
+    <div class="team">
+      <h3 data-ko="영업팀" data-en="SALES TEAM">영업팀</h3>
+      <p data-ko="대리점 관리 · 고객 관리 · 부품 조회 관리"
+         data-en="Agency Management · Customer Management · Parts Locator Management">
+         대리점 관리 · 고객 관리 · 부품 조회 관리
+      </p>
+    </div>
 
-<div class="strength-grid">
+    <div class="team">
+      <h3 data-ko="배송팀" data-en="DELIVERY TEAM">배송팀</h3>
+      <p data-ko="운송 · 배송 · 배차 관리"
+         data-en="Forwarding · Transportation · Dispatch Management">
+         운송 · 배송 · 배차 관리
+      </p>
+    </div>
 
-<div class="strength-item">
-
-<h3
-data-ko="정확한 부품 데이터"
-data-en="Accurate Parts Data">
-정확한 부품 데이터
-</h3>
-
-<p
-data-ko="부품 정보와 차량 적용 데이터를 기반으로 고객이 필요로 하는 제품을 정확하게 확인합니다."
-data-en="We identify the right products using reliable parts and vehicle application data.">
-부품 정보와 차량 적용 데이터를 기반으로
-고객이 필요로 하는 제품을 정확하게 확인합니다.
-</p>
-
+    <div class="team">
+      <h3 data-ko="경영지원팀" data-en="MANAGEMENT SUPPORT">경영지원팀</h3>
+      <p data-ko="총무 · 세무회계 · 전산 관리"
+         data-en="General Affairs · Tax Accounting · Computation Management">
+         총무 · 세무회계 · 전산 관리
+      </p>
+    </div>
+  </div>
 </div>
-
-
-<div class="strength-item">
-
-<h3
-data-ko="안정적인 공급"
-data-en="Reliable Supply">
-안정적인 공급
-</h3>
-
-<p
-data-ko="다양한 공급 네트워크와 체계적인 재고 관리를 통해 지속적이고 안정적인 제품 공급을 지향합니다."
-data-en="Our supply network and inventory management support consistent and reliable product availability.">
-다양한 공급 네트워크와 체계적인 재고 관리를 통해
-지속적이고 안정적인 제품 공급을 지향합니다.
-</p>
-
-</div>
-
-
-<div class="strength-item">
-
-<h3
-data-ko="비즈니스 파트너십"
-data-en="Business Partnership">
-비즈니스 파트너십
-</h3>
-
-<p
-data-ko="단순한 부품 판매를 넘어 고객과 장기적으로 함께 성장할 수 있는 비즈니스 파트너를 지향합니다."
-data-en="Beyond parts sales, we aim to build long-term business partnerships and grow together with our customers.">
-단순한 부품 판매를 넘어 고객과 장기적으로
-함께 성장할 수 있는 비즈니스 파트너를 지향합니다.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
+<section id="business" class="gray">
+<div class="container">
+  <div class="label">BUSINESS DIRECTION</div>
+  <h2 class="section-title" data-ko="미래를 위한 사업 확장" data-en="Expanding for the Future">미래를 위한 사업 확장</h2>
 
+  <div class="business-grid">
+    <div class="business-card">
+      <h3 data-ko="부품 커버리지 확대" data-en="Parts Coverage">부품 커버리지 확대</h3>
+      <p data-ko="수입차 시장의 다양한 부품을 확보하고 신규 파트너 발굴과 계약을 통해 공급 범위를 확대합니다."
+         data-en="We expand parts coverage by sourcing a wider range of imported vehicle parts and developing new partnerships.">
+         수입차 시장의 다양한 부품을 확보하고 신규 파트너 발굴과 계약을 통해 공급 범위를 확대합니다.
+      </p>
+    </div>
+
+    <div class="business-card">
+      <h3 data-ko="전기차 부품" data-en="EV PARTS">전기차 부품</h3>
+      <p data-ko="자동차 시장 변화에 대응하여 전기차 관련 부품 사업을 준비하고 있습니다."
+         data-en="We are preparing our electric vehicle parts business in response to changes in the automotive market.">
+         자동차 시장 변화에 대응하여 전기차 관련 부품 사업을 준비하고 있습니다.
+      </p>
+    </div>
+
+    <div class="business-card">
+      <h3 data-ko="유통 채널 확대" data-en="CHANNEL EXPANSION">유통 채널 확대</h3>
+      <p data-ko="오프라인 유통망뿐 아니라 온라인 판매와 병행수입을 통해 사업 영역 확대를 추진합니다."
+         data-en="We plan to expand through online sales channels, offline stores and parallel imports.">
+         오프라인 유통망뿐 아니라 온라인 판매와 병행수입을 통해 사업 영역 확대를 추진합니다.
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="goals" class="goals">
+<div class="container">
+  <div class="label">OUR GOALS</div>
+  <h2 class="section-title" data-ko="지속적인 성장" data-en="Continuous Growth">지속적인 성장</h2>
+
+  <p class="desc"
+     data-ko="공급률 확대, 신규 파트너 발굴 및 회사 역량 강화를 통해 지속적인 성장을 목표로 합니다."
+     data-en="We pursue continuous growth by increasing supply coverage, developing new partners and expanding company capacity.">
+     공급률 확대, 신규 파트너 발굴 및 회사 역량 강화를 통해 지속적인 성장을 목표로 합니다.
+  </p>
+
+  <div class="goal-grid">
+    <div class="goal">
+      <small>2026 SALES TARGET</small>
+      <strong>$5.7M</strong>
+      <p data-ko="2026년 매출 570만 달러 달성을 목표로 공급 역량을 확대합니다."
+         data-en="Our 2026 target is USD 5.7 million in annual sales through expanded supply capacity.">
+         2026년 매출 570만 달러 달성을 목표로 공급 역량을 확대합니다.
+      </p>
+    </div>
+
+    <div class="goal">
+      <small>2027 SALES TARGET</small>
+      <strong>$7M</strong>
+      <p data-ko="2027년 매출 700만 달러를 목표로 대리점 및 파트너 네트워크를 지속적으로 확장합니다."
+         data-en="Our 2027 target is USD 7 million through continued expansion of agencies and partner networks.">
+         2027년 매출 700만 달러를 목표로 대리점 및 파트너 네트워크를 지속적으로 확장합니다.
+      </p>
+    </div>
+  </div>
+</div>
+</section>
 
 <section id="contact" class="contact">
+<div class="container contact-grid">
+  <div>
+    <div class="label">CONTACT</div>
+    <h2 class="section-title" data-ko="BIGBOY PARTS와 함께하세요." data-en="Partner With BIGBOY PARTS.">BIGBOY PARTS와 함께하세요.</h2>
+    <p class="desc"
+       data-ko="자동차부품 공급 및 비즈니스 관련 문의를 환영합니다."
+       data-en="We welcome inquiries regarding automotive parts supply and business partnerships.">
+       자동차부품 공급 및 비즈니스 관련 문의를 환영합니다.
+    </p>
+  </div>
 
-<div class="contact-inner">
+  <div class="contact-info">
+    <div class="contact-line">
+      <small>ADDRESS</small>
+      <strong data-ko="경남 창원시 마산회원구 봉암공단11길 77"
+              data-en="77, Bongamgongdan 11-gil, Masanhoewon-gu, Changwon-si, Gyeongsangnam-do, Republic of Korea">
+        경남 창원시 마산회원구 봉암공단11길 77
+      </strong>
+    </div>
 
-<div>
-
-<div class="section-label">CONTACT US</div>
-
-<h2
-data-ko="빅보이부품과 함께하세요."
-data-en="Partner With BIGBOY PARTS.">
-빅보이부품과 함께하세요.
-</h2>
-
-<p
-data-ko="제품 공급, 거래 및 해외 비즈니스 문의를 환영합니다."
-data-en="We welcome product supply, trade and international business inquiries.">
-제품 공급, 거래 및 해외 비즈니스 문의를 환영합니다.
-</p>
-
+    <div class="contact-line">
+      <small>TEL</small>
+      <strong><a href="tel:0552515121">055-251-5121</a></strong>
+    </div>
+  </div>
 </div>
-
-<a href="mailto:"
-class="contact-button"
-data-ko="문의하기"
-data-en="CONTACT US">
-문의하기
-</a>
-
-</div>
-
 </section>
 
-
-
 <footer>
-
-<div class="footer-inner">
-
-<img src="빅보이부품-컬러로고.gif" alt="BIGBOY PARTS">
-
-<div>
-© BIGBOY PARTS CO., LTD. All Rights Reserved.
+<div class="footer">
+  <img src="빅보이부품-컬러로고.gif" alt="BIGBOY PARTS">
+  <div>© BIGBOY PARTS CO., LTD. All Rights Reserved.</div>
 </div>
-
-</div>
-
 </footer>
 
-
-
 <script>
-
 let language="ko";
 
 function changeLanguage(){
+  language=language==="ko"?"en":"ko";
+  document.documentElement.lang=language;
 
-    language=language==="ko" ? "en" : "ko";
+  document.querySelectorAll("[data-ko]").forEach(function(el){
+    el.textContent=language==="ko" ? el.dataset.ko : el.dataset.en;
+  });
 
-    document.documentElement.lang=language;
-
-    document.querySelectorAll("[data-ko]").forEach(function(element){
-
-        element.textContent=
-            language==="ko"
-            ? element.dataset.ko
-            : element.dataset.en;
-
-    });
-
-    document.querySelector(".language").textContent=
-        language==="ko" ? "EN" : "KR";
+  document.querySelector(".lang").textContent=
+    language==="ko" ? "EN" : "KR";
 }
-
 </script>
 
 </body>
