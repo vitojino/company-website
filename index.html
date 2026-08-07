@@ -48,10 +48,13 @@ nav{
 
 /* HERO */
 .hero{
-  min-height:620px;
+  min-height:calc(100vh - 82px);
   background:linear-gradient(115deg,#061827 0%,#092b47 62%,#0d456d 100%);
   color:#fff;
-  position:relative;overflow:hidden;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
 }
 .hero:after{
   content:"";
